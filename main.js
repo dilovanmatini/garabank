@@ -1,6 +1,7 @@
 // this function converts any value to numbers.
 var ConvertToNumber = function( value ){
-    return parseInt( isNaN(value) ? 0 : value ); 
+    value = parseInt(value);
+    return isNaN(value) ? 0 : value;
 };
 
 window.onload = function(){
