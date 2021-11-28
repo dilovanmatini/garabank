@@ -1,4 +1,45 @@
 /* services style sheets */
-.services{
-    
+.services > #main-page{
+    text-align: center;
+}
+.services > #main-page > #check-mortgage,
+.services > #main-page > #check-mortgage:visited,
+.services > #main-page > #check-mortgage:focus{
+    display: inline-block;
+    margin: 30px 10px;
+    font: 500 40px 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #304e60;
+}
+.services > #main-page > #check-mortgage:hover{
+    color: #497996;
+}
+.services > #main-page > .seperator{
+    font: 300 15px 'Quicksand', sans-serif;
+}
+.services > #main-page > .login-panel{
+    display: inline-block;
+    margin: 30px 10px;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+.services > #main-page > .login-panel > div{
+    padding: 10px 5px 20px;
+    font: 700 18px 'Quicksand', sans-serif;
+    color: #304e60;
+}
+.services > #main-page > .login-panel > label{
+    display: inline-block;
+    width: 100px;
+}
+.services > #main-page > .login-panel > input{
+    width: 240px;
+    margin: 1px;
+}
+.services > #mortgage-check-content{
+    display: none;
+}
+.services > #apply-form{
+    display: none;
 }

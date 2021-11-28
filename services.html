@@ -11,7 +11,9 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <title>Gara Bank - Services</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="services.css" />
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="services.js"></script>
 </head>
 <body>
     <!-- Starting Header -->
@@ -35,8 +37,10 @@
     <main>
         <section class="services">
             <div id="main-page">
-                <a id="apply" href="#">Apply For a Mortgage</a>
-                <div id="login-panel">
+                <a id="check-mortgage" href="#">Check for a mortgage</a>
+                <div class="seperator">OR</div><br>
+                <div class="login-panel">
+                    <div>Login for Staff</div>
                     <label for="username">User Name</label>
                     <input type="text" id="username" name="username" placeholder="User name"><br>
                     <label for="password">Password</label>
@@ -46,11 +50,11 @@
                     </div>
                 </div>
             </div>
-            <div id="apply-status">
-
+            <div id="mortgage-check-content">
+                apply-check-content
             </div>
             <div id="apply-form">
-
+                apply-form
             </div>
 
 
@@ -59,21 +63,7 @@
 
 
 
-            <label for="house_price">House Price (USD)</label>
-            <input type="text" name="house_price" id="house_price" style="width:100px;text-align:center;" placeholder="0"><br>
-            <label for="salary">Yearly Salary (USD)</label>
-            <select name="salary" id="salary" style="width:200px;">
-                <option value="0">-- Select Your Yearly Salary --</option>
-                <option value="1">Less than 30,000</option>
-                <option value="30">30,000 - 44,999</option>
-                <option value="45">45,000 - 54,999</option>
-                <option value="55">55,000 - 69,999</option>
-                <option value="70">70,000 and above</option>
-            </select><br>
-            <label for="advance">Advance Payment (USD)</label>
-            <input type="text" name="advance" style="width:100px;text-align:center;" id="advance" palceholder="0"><br>
-            <input type="button" id="calculate" value="Calculate">
-            <div id="calculation_results"></div>
+
         </section>
     </main>
     <!-- Ending Body -->

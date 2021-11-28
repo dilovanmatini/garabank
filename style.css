@@ -23,6 +23,27 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+input[type="text"],
+input[type="password"]{
+    padding: 5px 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    line-height: 20px;
+    font: 400 15px 'Quicksand', sans-serif;
+}
+label{
+    font: 700 15px 'Quicksand', sans-serif;
+}
+button{
+    padding: 5px 6px;
+    line-height: 20px;
+    border: 1px solid #304e60;
+    background-color: #497996;
+    color: #fff;
+    font: 700 15px 'Quicksand', sans-serif;
+    cursor: pointer;
+}
+
 /* Giving properties to the main elements */
 header{
     background-color: #08679f;
