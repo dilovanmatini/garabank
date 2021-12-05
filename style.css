@@ -8,9 +8,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+dl, dt, dd, ol, ul, li, form, label, legend, caption, tbody, tfoot, thead,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -23,15 +21,38 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+fieldset{
+    padding: 10px 25px 20px;
+    border-color: #eee;
+}
+legend{
+    font: 700 18px 'Quicksand', sans-serif;
+    padding: 4px 8px;
+}
 input[type="text"],
+input[type="email"],
+input[type="tel"],
 input[type="password"]{
+    margin: 1px;
     padding: 5px 6px;
     border: 1px solid #ccc;
     background-color: #fff;
     line-height: 20px;
     font: 400 15px 'Quicksand', sans-serif;
 }
+input[disabled]{
+    background-color: #eee;
+}
+select{
+    margin: 1px;
+    padding: 4px 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    line-height: 20px;
+    font: 400 15px 'Quicksand', sans-serif;
+}
 label{
+    display: inline-block;
     font: 700 15px 'Quicksand', sans-serif;
 }
 button{
@@ -42,6 +63,19 @@ button{
     color: #fff;
     font: 700 15px 'Quicksand', sans-serif;
     cursor: pointer;
+}
+
+table, th, td {
+    border: 1px solid #192933;
+    border-collapse: collapse;
+}
+th, td{
+    background-color: #fff;
+    font: 400 15px 'Quicksand', sans-serif;
+}
+th{
+    font: 700 15px 'Quicksand', sans-serif;
+    background-color: #eaeaea;
 }
 
 /* Giving properties to the main elements */
@@ -165,4 +199,38 @@ footer > section > aside.links > div > a:visited{
     font: 500 15px 'Quicksand', sans-serif;
     color: #dfdfdf;
     text-decoration: none;
+}
+
+.post-content{
+    margin-top: 30px;
+    padding: 30px;
+    text-align: left;
+    font: 400 18px 'Quicksand', sans-serif;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Login Page */
+.login > div{
+    text-align: center;
+}
+.login > div > .login-panel{
+    display: inline-block;
+    margin: 30px 10px;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+.login > div > .login-panel > div{
+    padding: 10px 5px 20px;
+    font: 700 18px 'Quicksand', sans-serif;
+    color: #304e60;
+}
+.login > div > .login-panel > label{
+    display: inline-block;
+    width: 100px;
+}
+.login > div > .login-panel > input{
+    width: 240px;
+    margin: 1px;
 }

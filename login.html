@@ -9,8 +9,11 @@
     <meta name="keywords" content="bank, loan, mortgage, payment, borrow" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-    <title>Gara Bank - About</title>
+    <title>Gara Bank - Policy</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+        const IS_LOGIN_PAGE = true;
+    </script>
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
@@ -34,9 +37,18 @@
     <!-- Ending Header -->
     <!-- Starting Body -->
     <main>
-        <section>
-            <div class="post-content">
-                Gara Bank is an independent Mortgage Corporation. Our main goal is to provide excellent services for our customers, also to make the process of managing loan applications more accessible and faster for our employees. We offer excellent services to our customers and enable them to estimate their monthly payments and other mortgage details. Our mission is to serve as a trusted advisor, delivering highly customized services and guiding you through the loan process from application to closing and beyond.
+        <section class="login">
+            <div>
+                <div class="login-panel">
+                    <div>Login for Staff</div>
+                    <label for="username">User Name</label>
+                    <input type="text" id="uname" name="username" placeholder="User name"><br>
+                    <label for="password">Password</label>
+                    <input type="password" id="upass" name="password" placeholder="Password">
+                    <div>
+                        <button id="login_button" onclick="doLogin();">Login</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

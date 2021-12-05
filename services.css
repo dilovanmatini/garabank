@@ -1,45 +1,175 @@
 /* services style sheets */
-.services > #main-page{
+.services > #apply-main{
+    display: block;
     text-align: center;
 }
-.services > #main-page > #check-mortgage,
-.services > #main-page > #check-mortgage:visited,
-.services > #main-page > #check-mortgage:focus{
+.services > #apply-main > .content{
+    margin-top: 30px;
+    padding: 30px;
+    text-align: left;
+    font: 400 18px 'Quicksand', sans-serif;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.services > #apply-main > #apply,
+.services > #apply-main > #apply:visited,
+.services > #apply-main > #apply:focus{
     display: inline-block;
-    margin: 30px 10px;
-    font: 500 40px 'Quicksand', sans-serif;
+    margin: 50px 10px;
+    padding: 20px 30px;
+    font: 500 30px 'Quicksand', sans-serif;
     text-decoration: none;
-    color: #304e60;
+    color: #fff;
+    background-color: #497996;
+    border-radius: 10px;
 }
-.services > #main-page > #check-mortgage:hover{
-    color: #497996;
+.services > #apply-main > #apply:hover{
+    background-color: #304e60;
 }
-.services > #main-page > .seperator{
+.services > #apply-main > .seperator{
     font: 300 15px 'Quicksand', sans-serif;
 }
-.services > #main-page > .login-panel{
+.services > #apply-main > .login-panel{
     display: inline-block;
     margin: 30px 10px;
     padding: 20px 30px;
     border: 1px solid #ccc;
     background-color: #eee;
 }
-.services > #main-page > .login-panel > div{
+.services > #apply-main > .login-panel > div{
     padding: 10px 5px 20px;
     font: 700 18px 'Quicksand', sans-serif;
     color: #304e60;
 }
-.services > #main-page > .login-panel > label{
+.services > #apply-main > .login-panel > label{
     display: inline-block;
     width: 100px;
 }
-.services > #main-page > .login-panel > input{
+.services > #apply-main > .login-panel > input{
     width: 240px;
     margin: 1px;
 }
-.services > #mortgage-check-content{
-    display: none;
-}
 .services > #apply-form{
     display: none;
+}
+.services > #apply-form #personal-info label{
+    width: 140px;
+}
+.services > #apply-form #financial-info label{
+    width: 260px;
+}
+
+/* The Result */
+.services > #apply-result{
+    display: none;
+    text-align: center;
+}
+.services > #apply-result > #apply-customer{
+    display: none;
+}
+.services > #apply-result > #apply-customer > h2{
+    margin: 40px 10px;
+    text-align: center;
+    font: 400 28px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-customer > div{
+    text-align: center;
+    font: 400 15px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff{
+    display: none;
+    text-align: left;
+}
+.services > #apply-result > #apply-staff > .header{
+    width: 800px;
+    height: 140px;
+    border: 2px solid #aaa;
+    border-bottom-width: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.services > #apply-result > #apply-staff > .header > h1{
+    margin-top: 30px;
+    font: 700 36px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .header > div{
+    font: 400 18px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .info{
+    width: 800px;
+    height: 600px;
+    border: 2px solid #aaa;
+    border-bottom-width: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.services > #apply-result > #apply-staff > .info > .row{
+    margin: 10px auto;
+}
+.services > #apply-result > #apply-staff > .info > .row > .title{
+    display: inline-block;
+    width: 200px;
+    font: 400 18px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .info > .row > .text{
+    display: inline-block;
+    font: 700 18px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .info > .box{
+    display: inline-block;
+    width: 242px;
+    margin-top: 200px;
+    text-align: center;
+}
+.services > #apply-result > #apply-staff > .info > .box > div:first-child{
+    font: 400 18px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .info > .box > div:last-child{
+    font: 700 18px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .calculations{
+    position: relative;
+    width: 800px;
+    height: 460px;
+    border: 2px solid #aaa;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.services > #apply-result > #apply-staff > .calculations > .row{
+    margin: 10px auto;
+}
+.services > #apply-result > #apply-staff > .calculations > .row > .title{
+    display: inline-block;
+    width: 200px;
+    font: 400 18px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .calculations > .row > .text{
+    display: inline-block;
+    font: 700 18px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .calculations > .row span{
+    display: inline-block;
+    margin-left: 20px;
+    font: 400 15px 'Quicksand', sans-serif;
+    line-height: 26px;
+}
+.services > #apply-result > #apply-staff > .calculations > .sign1{
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+    font: 400 15px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .calculations > .sign2{
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+    font: 400 15px 'Quicksand', sans-serif;
+}
+.services > #apply-result > #apply-staff > .calculations > #diagram{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    right: 0;
+    top: 0;
+    font: 400 15px 'Quicksand', sans-serif;
 }

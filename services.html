@@ -12,6 +12,7 @@
     <title>Gara Bank - Services</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="services.css" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="services.js"></script>
 </head>
@@ -29,6 +30,7 @@
                 <a href="about.html">About</a>
                 <a href="contact_us.html">Contact Us</a>
                 <a href="policy.html">Policy</a>
+                <a id="login_link" href="login.html">Login</a>
             </menu>
         </nav>
     </header>
@@ -36,34 +38,132 @@
     <!-- Starting Body -->
     <main>
         <section class="services">
-            <div id="main-page">
-                <a id="check-mortgage" href="#">Check for a mortgage</a>
-                <div class="seperator">OR</div><br>
-                <div class="login-panel">
-                    <div>Login for Staff</div>
-                    <label for="username">User Name</label>
-                    <input type="text" id="username" name="username" placeholder="User name"><br>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Password">
-                    <div>
-                        <button id="login-button">Login</button>
+            <div id="apply-main">
+                <div class="content">
+                    A mortgage calculator is one of the services we offer. With this helpful tool, you can construct a scenario for your potential new home. Then you'll be able to see what your monthly mortgage payment would be based on the information that you provide.
+                    Use the calculator below to discover an estimated monthly mortgage payment that works for you. Please keep in mind that the dollar numbers shown are not guaranteed, and you may end up paying more or less.
+                </div>
+                <a id="apply" href="#">Apply for a mortgage</a><br>
+                <table id="applications" width="100%" cellspacing="1" cellpadding="6" style="display:none;">
+                    <tr>
+                        <th colspan="6">Applications</th>
+                    </tr>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Home Price</th>
+                        <th>Salary</th>
+                        <th>Advance Payment</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="apply-form">
+                <fieldset id="personal-info">
+                    <legend>Personal Information</legend>
+                    <label for="app-id">Number</label>
+                    <input type="text" id="app-id" name="app-id" style="width:100px;text-align:center;" disabled><br>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" style="width:240px;"><br>
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" style="width:240px;"><br>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" style="width:400px;"><br>
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" style="width:240px;"><br>
+                    <label for="address">Address</label>
+                    <input type="tel" id="address" name="address" style="width:400px;">
+                </fieldset><br>
+                <fieldset id="financial-info">
+                    <legend>Financial Information</legend>
+                    <label for="hourse-price">House/Apartments Price (USD)</label>
+                    <input type="text" id="hourse-price" name="hourse-price" style="width:200px;text-align: center;" placeholder="0"><br>
+                    <label for="salary">Yearly Salary (USD)</label>
+                    <select name="salary" id="salary" style="width:214px;">
+                        <option value="0">Select Salary</option>
+                        <option value="1">Less than 30,000</option>
+                        <option value="30">30,000 - 44,999</option>
+                        <option value="45">45,000 - 54,999</option>
+                        <option value="55">55,000 - 69,999</option>
+                        <option value="70">70,000 and above</option>
+                    </select><br>
+                    <label for="advance-payment">Dawn Payment (In Advance) (USD)</label>
+                    <input type="text" id="advance-payment" name="advance-payment" style="width:200px;text-align: center;" placeholder="0"><br>
+                </fieldset><br>
+                <div style="text-align: center;">
+                    <button id="do-apply">APPLY</button>
+                    <button id="do-cancel">CANCEL</button>
+                </div>
+            </div>
+            <div id="apply-result">
+                <div id="apply-customer">
+                    <h2>Thank You</h2>
+                    <div>Your application has been sent successfully. Please, visit Gara Bank for further information.</div>
+                </div>
+                <div id="apply-staff">
+                    <div class="header">
+                        <h1>Gara Bank</h1>
+                        <div>Application for a mortgage</div>
+                    </div>
+                    <div class="info">
+                        <div class="row">
+                            <div class="title">Form No:</div>
+                            <div class="text" id="form-app-id"></div>
+                        </div>
+                        <div class="row">
+                            <div class="title">Customer Name:</div>
+                            <div class="text" id="form-name"></div>
+                        </div>
+                        <div class="row">
+                            <div class="title">Email:</div>
+                            <div class="text" id="form-email"></div>
+                        </div>
+                        <div class="row">
+                            <div class="title">Phone:</div>
+                            <div class="text" id="form-phone"></div>
+                        </div>
+                        <div class="row">
+                            <div class="title">Address:</div>
+                            <div class="text" id="form-address"></div>
+                        </div><br>
+                        <div class="box">
+                            <div>House Price</div>
+                            <div id="form-house-price"></div>
+                        </div>
+                        <div class="box">
+                            <div>Yearly Salary</div>
+                            <div id="form-salary"></div>
+                        </div>
+                        <div class="box">
+                            <div>Advance Payment</div>
+                            <div id="form-advance-payment"></div>
+                        </div>
+                    </div>
+                    <div class="calculations">
+                        <div class="row">
+                            <div class="title">Principle (Loan):</div>
+                            <div class="text" id="form-principle"></div>
+                        </div>
+                        <div class="row">
+                            <div class="title">Monthly Payment:</div>
+                            <div class="text" id="form-monthly-payment"></div>
+                        </div>
+                        <div class="row">
+                            <div class="title">Total Payment:</div>
+                            <div class="text" id="form-total-payment"></div>
+                        </div>
+                        <div class="row">
+                            <div class="title">Total Interist:</div>
+                            <div class="text" id="form-total-interist"></div>
+                        </div>
+                        <div id="diagram">
+                            Diagram
+                        </div>
+                        <div class="sign1">Signature</div>
+                        <div class="sign2">Signature</div>
                     </div>
                 </div>
             </div>
-            <div id="mortgage-check-content">
-                apply-check-content
-            </div>
-            <div id="apply-form">
-                apply-form
-            </div>
-
-
-
-
-
-
-
-
         </section>
     </main>
     <!-- Ending Body -->
